@@ -1,2 +1,8 @@
 Noah Dinan
 Peter Gerrits
+Zane Jacobi
+
+---
+
+Diff algorithm
+Problem: finding the difference between two string inputs
