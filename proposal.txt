@@ -4,5 +4,32 @@ Zane Jacobi
 
 ---
 
-Diff algorithm
-Problem: finding the difference between two string inputs
+Levenshtein Distance
+====================
+
+This algorithm aims to solve the edit distance problem. For strings A and B, levenshtein
+distance metric tells us the minimum number of edits that must be made to string A to
+transform it into string B. For example, for inputs "tomato" and "potato" the algorithm
+would output 2 because two edits need to be made to make the strings equivalent.
+
+This algorithm can be used to quantify the differences between DNA sequences.
+Because DNA can be represented with strings of characters, we can find how similar they are.
+
+This algorithm can also be used in spellcheck software when searching for dictionary
+matches for a given misspelled word.
+
+Implemented with dynamic programming, the algorithm runs in worst and average
+case of a * b where a and b are the lengths of the two input strings.
+
+T(a, b) = a*b
+
+Other algorithms that solve the edit distance problem are longest common subsequence, and 
+hamming distance. Hamming distance only works for comparing strings of equivalent length, and
+LCS measures based on subsequences in the strings, rather than just characters. Both algorithms
+also run in a*b for worst and average case.
+
+This algorithm would be of medium difficulty to implement and it would be
+very easy to perform a demonstration. We would not need to use a dataset as we could create
+our own with random number generator and a collection of characters.
+To demonstrate, we could step through the algorithm using a visual matrix aid in a
+slideshow.
