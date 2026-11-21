@@ -60,3 +60,31 @@ having much less overhead though, and are generally faster for most scenarios.
 A Fibonacci heap would be of medium difficulty to implement and it would also be of medium difficulty to demonstrate.
 We would not need a dataset as we could randomly generate a graph for the demonstration. To demonstrate, we could step
 through a couple cycles of Dijkstra's algorithm and show how the Fibonacci heap changes.
+
+
+A* Search Algorithm
+====================
+
+The A* (A-star) search algorithm aims to find the shortest path between a starting node and a destination node in a graph. It uses a combination of the distance already traveled and a heuristic that estimates the remaining distance to determine which node to explore next.
+
+This algorithm is commonly used in GPS navigation systems to find the shortest or fastest route between two locations.
+
+A* is also used in video games for pathfinding, allowing characters to navigate around obstacles and efficiently reach a destination.
+
+The algorithm works by assigning each node a value using the formula:
+
+f(n) = g(n) + h(n)
+
+Where g(n) is the cost of reaching the current node from the starting node, and h(n) is the estimated cost of reaching the destination.
+
+The time complexity of A* depends on the heuristic and implementation. In the worst case, A* can have exponential time complexity based on the depth of the solution, although its performance is generally much better when using a good heuristic.
+
+T(d) = O(b^d)
+
+Where b is the branching factor and d is the depth of the solution.
+
+Other algorithms that solve the shortest path problem are Dijkstra's algorithm and breadth-first search (BFS). Dijkstra's algorithm finds the shortest path without using a heuristic, meaning it may explore more nodes than A*. BFS finds the shortest path in an unweighted graph but does not account for different edge weights. A* can be more efficient than both algorithms when using an effective heuristic.
+
+This algorithm would be of medium difficulty to implement and very easy to demonstrate. We would not need a dataset because we could generate our own grid containing obstacles, a starting point, and a destination.
+
+To demonstrate, we could step through the algorithm using a visual grid in a slideshow, showing how A* evaluates neighboring nodes and selects the next node to explore based on its calculated cost. We could then highlight the shortest path once the destination is reached.
