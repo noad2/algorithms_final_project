@@ -33,3 +33,30 @@ very easy to perform a demonstration. We would not need to use a dataset as we c
 our own with random number generator and a collection of characters.
 To demonstrate, we could step through the algorithm using a visual matrix aid in a
 slideshow.
+
+
+Fibonacci heaps
+====================
+
+Fibonacci heaps aim to implement priority queues in a highly efficient manner. One common use is in Dijkstra's algorithm,
+where the inputs are edges with weights, and the Fibonacci heap provides them back to the algorithm in priority order
+
+Fibonacci heaps can help improve the runtime of Dijkstra and Prim algorithms due to its time complexity improvements over a binary heap
+
+Fibonacci heaps are also used when frequently combining priority queues, as merging Fibonacci heaps happens in constant time
+
+Asymptotic runtimes:
+	Find Min:      Θ(1)
+	Delete Min:    O(Log n)
+	Insert:        Θ(1)
+	Decrease-Key:  Θ(1)
+	Merge:         Θ(1)
+
+Other data structures that solve the same problem are normal priority queues and pairing heaps. Priority queues have a
+much worse asymptotic time complexity, but have much lower constant overhead costs than fibonacci heaps. Pairing heaps
+have a similar time complexity for everything decrease-key, which is O(log n). Pairing heaps also have the benefit of
+having much less overhead though, and are generally faster for most scenarios.
+
+A Fibonacci heap would be of medium difficulty to implement and it would also be of medium difficulty to demonstrate.
+We would not need a dataset as we could randomly generate a graph for the demonstration. To demonstrate, we could step
+through a couple cycles of Dijkstra's algorithm and show how the Fibonacci heap changes.
